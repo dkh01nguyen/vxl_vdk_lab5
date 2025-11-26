@@ -1,0 +1,15 @@
+/*
+ * global.h
+ *
+ *  Created on: Nov 26, 2025
+ *      Author: nguyen
+ */
+
+#ifndef INC_GLOBAL_H_
+#define INC_GLOBAL_H_
+
+#include "software_timer.h"
+#include "schedular.h"
+#include <stdint.h>
+
+#endif /* INC_GLOBAL_H_ */

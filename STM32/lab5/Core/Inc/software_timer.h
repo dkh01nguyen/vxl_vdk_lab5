@@ -1,0 +1,25 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Nov 26, 2025
+ *      Author: nguyen
+ */
+
+#ifndef INC_SOFTWARE_TIMER_H_
+#define INC_SOFTWARE_TIMER_H_
+
+#define TIME_CYCLE 10
+#define MAX_TIMERS 5
+
+typedef struct {
+	int flag;
+	int counter;
+} softwareTimer;
+
+void timerInit();
+void setTimer(int index, int duration);
+void clearTimer(int index);
+int isTimerExpired(int index);
+void timerRun();
+
+#endif /* INC_SOFTWARE_TIMER_H_ */
