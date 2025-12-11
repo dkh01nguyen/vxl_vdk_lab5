@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;lab5/Core/Inc/schedular.h&apos; to &apos;scheduler.h&apos;" description="Rename resource &apos;schedular.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/schedular.h" name="scheduler.h" stamp="1764429579211" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;lab5/Core/Src/schedular.c&apos; to &apos;scheduler.c&apos;" description="Rename resource &apos;schedular.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/schedular.c" name="scheduler.c" stamp="1764429589506" updateReferences="true"/>
+</session>

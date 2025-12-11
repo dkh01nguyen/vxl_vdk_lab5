@@ -16,9 +16,10 @@ typedef struct {
 	int counter;
 } softwareTimer;
 
-void timerInit();
+
+extern softwareTimer timerPool[MAX_TIMERS];
+
 void setTimer(int index, int duration);
-void clearTimer(int index);
 int isTimerExpired(int index);
 void timerRun();
 

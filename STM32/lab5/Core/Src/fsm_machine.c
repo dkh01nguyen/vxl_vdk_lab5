@@ -64,7 +64,7 @@ void uart_communication_fsm() {
             break;
 
         case UART_COMM_SEND:
-            sprintf(str, "!ADC=%lu#\r\n", saved_ADC_Value);
+            sprintf(str, "\r\n!ADC=%lu#\r\n", saved_ADC_Value);
             HAL_UART_Transmit(&huart2, (uint8_t*)str, strlen(str), 1000);
 
             setTimer(1, 3000);
@@ -77,7 +77,7 @@ void uart_communication_fsm() {
                 command_flag = 0;
                 uart_comm_status = UART_COMM_WAIT;
             }
-            else if (IsTimerExpired(1)) {
+            else if (isTimerExpired(1)) {
                 uart_comm_status = UART_COMM_SEND;
             }
             break;

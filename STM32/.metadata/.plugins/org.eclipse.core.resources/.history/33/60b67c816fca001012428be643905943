@@ -1,3 +1,0 @@
-#include "software_timer.h"
-
-softwareTimer timerPool[MAX_TIMERS];

@@ -48,7 +48,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef * htim){
-
+	SCH_Update_Tasks();
 }
 /* USER CODE END PV */
 
@@ -103,8 +103,7 @@ int main(void)
   HAL_UART_Receive_IT(&huart2, &temp, 1);
   HAL_ADC_Start(&hadc1);
   SCH_Add_Tasks(timerRun, 1, 1);
-  SCH_Add_Tasks(timerInit, 1, 0);
-  SCH_Add_Tasks(LEDBlinky, 100, 100);
+  SCH_Add_Tasks(ledBlink, 100, 100);
   SCH_Add_Tasks(cmd_parser_final, 1, 1);
   SCH_Add_Tasks(uart_communication_fsm, 1, 1);
   /* USER CODE END 2 */
@@ -229,7 +228,7 @@ static void MX_TIM2_Init(void)
   htim2.Instance = TIM2;
   htim2.Init.Prescaler = 7999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 1;
+  htim2.Init.Period = 9;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)

@@ -8,7 +8,6 @@
 
 #include "global.h"
 
-void LEDBlinky() {
+void ledBlink() {
 	HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
 }
-
